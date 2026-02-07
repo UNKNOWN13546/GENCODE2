@@ -1,0 +1,155 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #131921;
+  z-index: 1000;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 10px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  background-color: #ff9900;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-a {
+  color: #232f3e;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.logo-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background-color: #ff9900;
+  border-radius: 2px;
+}
+
+.logo-text {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 40px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 0 15px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-button {
+  background-color: #febd69;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #232f3e;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background-color: #f3a847;
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  flex-shrink: 0;
+  padding: 5px;
+}
+
+.cart-icon:hover {
+  opacity: 0.8;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  border: 2px solid #232f3e;
+}
+
+@media (max-width: 480px) {
+  .header-top {
+    padding: 8px 10px;
+  }
+
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo-a {
+    font-size: 20px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .search-bar {
+    height: 36px;
+  }
+
+  .search-input {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  .cart-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
